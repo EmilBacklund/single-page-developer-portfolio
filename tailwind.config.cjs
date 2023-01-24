@@ -25,7 +25,6 @@ module.exports = {
       margin: {
         portfolioMarginBottomHeader: '88px',
         porfolioH1MarginBottom: '43px',
-
         portfolioIntroductionMarginBottom: '66px',
       },
       lineHeight: {
@@ -33,6 +32,10 @@ module.exports = {
       },
       letterSpacing: {
         portfolioLetterSpacing: '-0.156em',
+      },
+      screens: {
+        tablet: '708px',
+        computer: '1110px',
       },
     },
   },

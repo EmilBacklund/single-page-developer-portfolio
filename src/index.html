@@ -17,11 +17,41 @@
     class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack max-w-portfolioMaxWidth mx-auto w-11/12 text-white"
   >
     <header class="relative">
+      <nav class="tablet:hidden">
+        <div class="relative w-full">
+          <img
+            class="w-2/3 max-w-xs mx-auto computer:hidden tablet:hidden"
+            src="images/image-profile-mobile.webp"
+            alt=""
+          />
+          <div class="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col gap-5 items-center">
+            <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+              emilbacklund
+            </p>
+            <ul class="flex gap-6 tablet:mr-8 items-center">
+              <li>
+                <a href=""><img src="images/icon-github.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img src="images/icon-frontend-mentor.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img src="images/icon-linkedin.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img src="images/icon-twitter.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <nav
-        class="flex justify-between items-center py-portfolioHeaderPaddingXL mb-portfolioMarginBottomHeader"
+        class="hidden tablet:flex tablet:gap-0 tablet:flex-row tablet:justify-between items-center py-5 tablet:py-[29px] computer:py-portfolioHeaderPaddingXL mb-portfolioMarginBottomHeader"
       >
-        <p class="text-portfolioName leading-8 tracking-tight font-bold">emilbacklund</p>
-        <ul class="flex gap-8 mr-8">
+        <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+          emilbacklund
+        </p>
+        <ul class="flex gap-8 tablet:mr-8 items-center">
           <li>
             <a href=""><img src="images/icon-github.svg" alt="" /></a>
           </li>
@@ -36,18 +66,32 @@
           </li>
         </ul>
       </nav>
-      <div class="absolute top-0 right-0 -z-10 max-w-md">
+      <div
+        class="absolute top-0 right-1/2 translate-x-1/2 tablet:translate-x-0 tablet:right-0 -z-10 computer:max-w-md tablet:max-w-xs"
+      >
         <div class="relative">
-          <img src="images/image-profile-desktop.webp" alt="" />
-          <img class="absolute bottom-16 -left-[64.5px]" src="images/pattern-circle.svg" alt="" />
+          <img class="hidden computer:block" src="images/image-profile-desktop.webp" alt="" />
+          <img
+            class="hidden tablet:block computer:hidden"
+            src="images/image-profile-tablet.webp"
+            alt=""
+          />
+
+          <img
+            class="absolute computer:bottom-16 computer:-left-[64.5px]"
+            src="images/pattern-circle.svg"
+            alt=""
+          />
         </div>
       </div>
       <div class="relative">
-        <div class="absolute -z-10 left-0 -translate-x-1/2 top-0 -translate-y-1/2">
+        <div
+          class="hidden tablet:block absolute -z-10 left-0 -translate-x-1/2 top-0 -translate-y-1/2"
+        >
           <img src="images/pattern-rings.svg" alt="" />
         </div>
         <h1
-          class="text-portfolioHeadingXL leading-portfolioHeadingXL font-bold mb-porfolioH1MarginBottom"
+          class="text-[40px] leading-[40px] computer:text-portfolioHeadingXL tablet:leading-portfolioHeadingXL font-bold mb-porfolioH1MarginBottom tablet:text-7xl tablet:max-w-md computer:max-w-full"
         >
           Nice to meet you! <br />I'm
           <span class="underline decoration-portfolioGreen">Emil Backlund</span>.
