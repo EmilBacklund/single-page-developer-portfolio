@@ -12,18 +12,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Emil Backlund</title>
     <script type="module" src="./js/main.js" defer></script>
+    <script type="module" src="./js/greeting.js" defer></script>
   </head>
   <body
-    class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack max-w-portfolioMaxWidth mx-auto w-11/12 text-white"
+    class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack max-w-portfolioMaxWidth mx-auto w-11/12 text-white overflow-x-hidden"
   >
     <header class="relative">
-      <nav class="tablet:hidden">
+      <nav class="tablet:hidden mb-10 relative w-full">
+        <div class="absolute bottom-0 right-0 translate-x-[84px]">
+          <img src="images/pattern-circle.svg" alt="" />
+        </div>
         <div class="relative w-full">
           <img
             class="w-2/3 max-w-xs mx-auto computer:hidden tablet:hidden"
             src="images/image-profile-mobile.webp"
             alt=""
           />
+          <div class="absolute -z-10 -left-14 -translate-x-1/2 top-1/2 -translate-y-1/2">
+            <img src="images/pattern-rings.svg" alt="" />
+          </div>
           <div class="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col gap-5 items-center">
             <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
               emilbacklund
@@ -67,37 +74,39 @@
         </ul>
       </nav>
       <div
-        class="absolute top-0 right-1/2 translate-x-1/2 tablet:translate-x-0 tablet:right-0 -z-10 computer:max-w-md tablet:max-w-xs"
+        class="absolute bottom-0 top-0 right-0 float-right computer:right-0 -z-10 tablet:translate-x-10 computer:translate-x-0"
       >
-        <div class="relative">
-          <img class="hidden computer:block" src="images/image-profile-desktop.webp" alt="" />
+        <div class="relative h-full">
           <img
-            class="hidden tablet:block computer:hidden"
+            class="hidden computer:block h-full object-cover float-right"
+            src="images/image-profile-desktop.webp"
+            alt=""
+          />
+          <img
+            class="hidden tablet:block computer:hidden h-full object-cover float-right"
             src="images/image-profile-tablet.webp"
             alt=""
           />
 
           <img
-            class="absolute computer:bottom-16 computer:-left-[64.5px]"
+            class="absolute computer:bottom-16 computer:right-[304px] tablet:-right-[64.5px] tablet:bottom-0 transition-all duration-500 float-right"
             src="images/pattern-circle.svg"
             alt=""
           />
         </div>
       </div>
-      <div class="relative">
+      <div class="relative text-center tablet:text-start mb-20">
         <div
           class="hidden tablet:block absolute -z-10 left-0 -translate-x-1/2 top-0 -translate-y-1/2"
         >
           <img src="images/pattern-rings.svg" alt="" />
         </div>
         <h1
-          class="text-[40px] leading-[40px] computer:text-portfolioHeadingXL tablet:leading-portfolioHeadingXL font-bold mb-porfolioH1MarginBottom tablet:text-7xl tablet:max-w-md computer:max-w-full"
-        >
-          Nice to meet you! <br />I'm
-          <span class="underline decoration-portfolioGreen">Emil Backlund</span>.
-        </h1>
+          class="text-[40px] leading-[40px] computer:text-portfolioHeadingXL tablet:leading-portfolioHeadingXL font-bold mb-porfolioH1MarginBottom tablet:text-7xl"
+          id="greeting"
+        ></h1>
         <p
-          class="tracking-normal max-w-md leading-7 text-portfolioLightGrey text-lg mb-portfolioIntroductionMarginBottom"
+          class="tracking-normal tablet:max-w-md leading-7 text-portfolioLightGrey text-lg mb-portfolioIntroductionMarginBottom"
         >
           Based in Oslo, I'm currently a student at Noroff Education, learning Front End Developing.
           <br />
@@ -110,5 +119,86 @@
         </button>
       </div>
     </header>
+    <main>
+      <section
+        class="relative flex flex-col items-center gap-6 tablet:gap-0 tablet:flex-row tablet:flex-wrap tablet:justify-between text-center tablet:text-start tracking-normal py-10 border-t border-b tablet:border-b-0 mb-20"
+      >
+        <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
+          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+            HTML
+          </h2>
+          <p class="text-portfolioLightGrey tablet:text-lg">2 Years Experience</p>
+        </div>
+        <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
+          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+            CSS
+          </h2>
+          <p class="text-portfolioLightGrey tablet:text-lg">2 Years Experience</p>
+        </div>
+        <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
+          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+            JavaScript
+          </h2>
+          <p class="text-portfolioLightGrey tablet:text-lg">2 Years Experience</p>
+        </div>
+        <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
+          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+            Tailwind
+          </h2>
+          <p class="text-portfolioLightGrey tablet:text-lg">1 Year Experience</p>
+        </div>
+        <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
+          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+            Figma
+          </h2>
+          <p class="text-portfolioLightGrey tablet:text-lg">2 Year Experience</p>
+        </div>
+        <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
+          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+            React
+          </h2>
+          <p class="text-portfolioLightGrey tablet:text-lg">Just Started</p>
+        </div>
+        <div class="absolute bottom-0 translate-x-1/2 translate-y-1/2 right-0">
+          <img src="images/pattern-rings.svg" alt="" />
+        </div>
+      </section>
+      <section>
+        <div class="flex justify-between mb-10">
+          <h2 class="text-[40px] tracking-tight leading-10">Projects</h2>
+          <button
+            class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+          >
+            CONTACT ME
+          </button>
+        </div>
+        <div class="flex flex-col gap-5">
+          <img src="images/www.focusart.info_.png" alt="" />
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl tracking-tight leading-8">SCHOOL PROJECT</h3>
+            <div
+              class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
+            >
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JAVASCRIPT</p>
+              <p>WORDPRESS</p>
+            </div>
+            <div class="flex gap-[30px]">
+              <button
+                class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+              >
+                VIEW PROJECT
+              </button>
+              <button
+                class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+              >
+                VIEW CODE
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
