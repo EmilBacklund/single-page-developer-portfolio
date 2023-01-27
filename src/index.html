@@ -13,11 +13,12 @@
     <title>Portfolio | Emil Backlund</title>
     <script type="module" src="./js/main.js" defer></script>
     <script type="module" src="./js/greeting.js" defer></script>
+    <script type="module" src="./js/githubAPI.js"></script>
   </head>
   <body
-    class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack max-w-portfolioMaxWidth mx-auto w-11/12 text-white overflow-x-hidden"
+    class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack text-white overflow-x-hidden"
   >
-    <header class="relative">
+    <header class="relative max-w-portfolioMaxWidth mx-auto w-11/12">
       <nav class="tablet:hidden mb-10 relative w-full">
         <div class="absolute bottom-0 right-0 translate-x-[84px]">
           <img src="images/pattern-circle.svg" alt="" />
@@ -119,7 +120,7 @@
         </button>
       </div>
     </header>
-    <main>
+    <main class="max-w-portfolioMaxWidth mx-auto w-11/12">
       <section
         class="relative flex flex-col items-center gap-6 tablet:gap-0 tablet:flex-row tablet:flex-wrap tablet:justify-between text-center tablet:text-start tracking-normal py-10 border-t border-b tablet:border-b-0 mb-20"
       >
@@ -172,33 +173,212 @@
             CONTACT ME
           </button>
         </div>
-        <div class="flex flex-col gap-5">
-          <img src="images/www.focusart.info_.png" alt="" />
-          <div class="flex flex-col gap-2">
-            <h3 class="text-2xl tracking-tight leading-8">SCHOOL PROJECT</h3>
-            <div
-              class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
-            >
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>JAVASCRIPT</p>
-              <p>WORDPRESS</p>
+        <div
+          class="flex flex-col gap-10 tablet:flex-row tablet:flex-wrap tablet:justify-between tablet:gap-0 mb-20 tablet:mb-[100px] computer:mb-[139px]"
+        >
+          <div
+            class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3 tablet:mb-[60px] computer:mb-[69px]"
+          >
+            <img src="images/www.focusart.info_.png" alt="" />
+            <div class="flex flex-col gap-2">
+              <h3 class="text-2xl tracking-tight leading-8">SHARE ART WEBSITE</h3>
+              <div
+                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
+              >
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JAVASCRIPT</p>
+                <p>WORDPRESS</p>
+              </div>
+              <div class="flex gap-[30px]">
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW PROJECT
+                </button>
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW CODE
+                </button>
+              </div>
             </div>
-            <div class="flex gap-[30px]">
-              <button
-                class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+          </div>
+          <div
+            class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3 tablet:mb-[60px] computer:mb-[69px]"
+          >
+            <img src="images/artfriender.png" alt="" />
+            <div class="flex flex-col gap-2">
+              <h3 class="text-2xl tracking-tight leading-8">SOCIAL MEDIA PLATFORM</h3>
+              <div
+                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
               >
-                VIEW PROJECT
-              </button>
-              <button
-                class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JAVASCRIPT</p>
+                <p>TAILWIND</p>
+              </div>
+              <div class="flex gap-[30px]">
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW PROJECT
+                </button>
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW CODE
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3 tablet:mb-[60px] computer:mb-[69px]"
+          >
+            <img src="images/auction-house.png" alt="" />
+            <div class="flex flex-col gap-2">
+              <h3 class="text-2xl tracking-tight leading-8">AUCTION WEBSITE</h3>
+              <div
+                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
               >
-                VIEW CODE
-              </button>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JAVASCRIPT</p>
+                <p>TAILWIND</p>
+              </div>
+              <div class="flex gap-[30px]">
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW PROJECT
+                </button>
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW CODE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3 tablet:mb-[60px] computer:mb-[69px]"
+          >
+            <img src="images/booking.png" alt="" />
+            <div class="flex flex-col gap-2">
+              <h3 class="text-2xl tracking-tight leading-8">BOOKING SYSTEM</h3>
+              <div
+                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
+              >
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JAVASCRIPT</p>
+                <p>REACT</p>
+              </div>
+              <div class="flex gap-[30px]">
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW PROJECT
+                </button>
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW CODE
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3">
+            <img src="images/frontendmentor.png" alt="" />
+            <div class="flex flex-col gap-2">
+              <h3 class="text-2xl tracking-tight leading-8">FRONTEND MENTOR PROJECT</h3>
+              <div
+                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
+              >
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JAVASCRIPT</p>
+                <p>TAILWIND</p>
+              </div>
+              <div class="flex gap-[30px]">
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW PROJECT
+                </button>
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW CODE
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3">
+            <img src="images/www.emil-backlund.com_.png" alt="" />
+            <div class="flex flex-col gap-2">
+              <h3 class="text-2xl tracking-tight leading-8">BUY VIDEO GAMES</h3>
+              <div
+                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
+              >
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>WORDPRESS</p>
+              </div>
+              <div class="flex gap-[30px]">
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW PROJECT
+                </button>
+                <button
+                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                >
+                  VIEW CODE
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer
+      class="bg-portfolioDarkGrey pt-[60px] pb-[60px] tablet:pt-[60px] tablet:pb-10 computer:p-20"
+    >
+      <div class="max-w-portfolioMaxWidth mx-auto w-11/12">
+        <h2 class="text-[40px] leading-10 text-center mb-5">Contact</h2>
+        <p class="text-base leading-[26px] tracking-normal text-center mb-[50px]">
+          I'm currently looking for a job and are up for doing any kind of projects. I love taking
+          on new tasks and devolop new skills. I look forward to hearing from you!
+        </p>
+        <form class="flex flex-col" id="contact-form">
+          <input
+            class="bg-transparent text-portfolioLightGrey pb-4 border-b indent-6 mb-8"
+            placeholder="NAME"
+            type="text"
+            required
+          />
+          <label class="hidden" for="Name">Name</label>
+          <input
+            class="bg-transparent text-portfolioLightGrey pb-4 border-b indent-6 mb-8"
+            placeholder="EMAIL"
+            type="email"
+            required
+          />
+          <label class="hidden" for="Email">Email</label>
+          <textarea
+            class="bg-transparent text-portfolioLightGrey"
+            placeholder="MESSAGE"
+            required
+          ></textarea>
+          <button
+            class="w-fit border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+          >
+            SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </footer>
   </body>
 </html>
