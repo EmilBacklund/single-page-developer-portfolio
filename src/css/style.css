@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.githubIcon {
+  background-image: url('images/icon-github.svg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+}
+
+.githubIcon:hover {
+  background-image: url('images/icon-github-active.svg');
+}
+
+.frontendMasterIcon {
+  background-image: url('images/icon-frontend-mentor.svg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+}
+
+.frontendMasterIcon:hover {
+  background-image: url('images/icon-frontend-mentor-active.svg');
+}
+
+.linkedinIcon {
+  background-image: url('images/icon-linkedin.svg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+}
+
+.linkedinIcon:hover {
+  background-image: url('images/icon-linkedin-active.svg');
+}
+
+.twitterIcon {
+  background-image: url('images/icon-twitter.svg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+}
+
+.twitterIcon:hover {
+  background-image: url('images/icon-twitter-active.svg');
+}

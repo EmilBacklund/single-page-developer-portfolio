@@ -14,6 +14,7 @@
     <script type="module" src="./js/main.js" defer></script>
     <script type="module" src="./js/greeting.js" defer></script>
     <script type="module" src="./js/githubAPI.js"></script>
+    <script type="module" src="./js/changeIconColor.js"></script>
   </head>
   <body
     class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack text-white overflow-x-hidden"
@@ -36,18 +37,18 @@
             <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
               emilbacklund
             </p>
-            <ul class="flex gap-6 tablet:mr-8 items-center">
+            <ul class="flex gap-6 items-center">
               <li>
-                <a href=""><img src="images/icon-github.svg" alt="" /></a>
+                <a href=""><div class="githubIcon transition-all duration-300"></div></a>
               </li>
               <li>
-                <a href=""><img src="images/icon-frontend-mentor.svg" alt="" /></a>
+                <a href=""><div class="frontendMasterIcon transition-all duration-300"></div></a>
               </li>
               <li>
-                <a href=""><img src="images/icon-linkedin.svg" alt="" /></a>
+                <a href=""><div class="linkedinIcon transition-all duration-300"></div></a>
               </li>
               <li>
-                <a href=""><img src="images/icon-twitter.svg" alt="" /></a>
+                <a href=""><div class="twitterIcon transition-all duration-300"></div></a>
               </li>
             </ul>
           </div>
@@ -59,18 +60,18 @@
         <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
           emilbacklund
         </p>
-        <ul class="flex gap-8 tablet:mr-8 items-center">
+        <ul class="flex gap-8 computer:mr-8 items-center">
           <li>
-            <a href=""><img src="images/icon-github.svg" alt="" /></a>
+            <a href=""><div class="githubIcon transition-all duration-300"></div></a>
           </li>
           <li>
-            <a href=""><img src="images/icon-frontend-mentor.svg" alt="" /></a>
+            <a href=""><div class="frontendMasterIcon transition-all duration-300"></div></a>
           </li>
           <li>
-            <a href=""><img src="images/icon-linkedin.svg" alt="" /></a>
+            <a href=""><div class="linkedinIcon transition-all duration-300"></div></a>
           </li>
           <li>
-            <a href=""><img src="images/icon-twitter.svg" alt="" /></a>
+            <a href=""><div class="twitterIcon transition-all duration-300"></div></a>
           </li>
         </ul>
       </nav>
@@ -347,37 +348,84 @@
       class="bg-portfolioDarkGrey pt-[60px] pb-[60px] tablet:pt-[60px] tablet:pb-10 computer:p-20"
     >
       <div class="max-w-portfolioMaxWidth mx-auto w-11/12">
-        <h2 class="text-[40px] leading-10 text-center mb-5">Contact</h2>
-        <p class="text-base leading-[26px] tracking-normal text-center mb-[50px]">
-          I'm currently looking for a job and are up for doing any kind of projects. I love taking
-          on new tasks and devolop new skills. I look forward to hearing from you!
-        </p>
-        <form class="flex flex-col" id="contact-form">
-          <input
-            class="bg-transparent text-portfolioLightGrey pb-4 border-b indent-6 mb-8"
-            placeholder="NAME"
-            type="text"
-            required
-          />
-          <label class="hidden" for="Name">Name</label>
-          <input
-            class="bg-transparent text-portfolioLightGrey pb-4 border-b indent-6 mb-8"
-            placeholder="EMAIL"
-            type="email"
-            required
-          />
-          <label class="hidden" for="Email">Email</label>
-          <textarea
-            class="bg-transparent text-portfolioLightGrey"
-            placeholder="MESSAGE"
-            required
-          ></textarea>
-          <button
-            class="w-fit border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+        <form
+          class="tablet:max-w-md tablet:flex tablet:flex-col mx-auto computer:flex-row computer:max-w-full computer:justify-between computer:gap-20 relative"
+          id="contact-form"
+        >
+          <div class="computer:max-w-md computer:flex-1">
+            <h2
+              class="text-[40px] leading-10 text-center mb-5 tablet:text-7xl font-bold computer:text-start"
+            >
+              Contact
+            </h2>
+            <p
+              class="text-base leading-[26px] tracking-normal text-center mb-[50px] computer:text-start"
+            >
+              I'm currently looking for a job and are up for doing any kind of projects. I love
+              taking on new tasks and devolop new skills. I look forward to hearing from you!
+            </p>
+          </div>
+          <div class="computer:max-w-md computer:flex-1">
+            <div class="flex flex-col relative mb-8">
+              <input
+                class="bg-transparent text-portfolioLightGrey pb-4 border-b indent-6 mb-8"
+                placeholder="NAME"
+                type="text"
+                required
+              />
+              <label class="hidden" for="Name">Name</label>
+              <input
+                class="bg-transparent text-portfolioLightGrey pb-4 border-b indent-6 mb-8"
+                placeholder="EMAIL"
+                type="email"
+                required
+              />
+              <label class="hidden" for="Email">Email</label>
+              <textarea
+                class="bg-transparent text-portfolioLightGrey indent-6 border-b pb-20"
+                placeholder="MESSAGE"
+                required
+              ></textarea>
+              <div
+                class="absolute bottom-0 translate-y-1/2 -translate-x-2/3 tablet:-translate-x-full tablet:translate-y-full computer:hidden"
+              >
+                <img src="images/pattern-rings.svg" alt="" />
+              </div>
+            </div>
+            <div class="flex justify-end">
+              <button
+                class="w-fit border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1 leading-7 mb-[87px]"
+              >
+                SEND MESSAGE
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-0 left-0 -translate-x-2/3 -translate-y-1/3 hidden computer:block"
           >
-            SEND MESSAGE
-          </button>
+            <img src="images/pattern-rings.svg" alt="" />
+          </div>
         </form>
+        <div class="border-b mb-10"></div>
+        <div class="flex flex-col gap-5 items-center tablet:flex-row tablet:justify-between">
+          <h2 class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+            emilbacklund
+          </h2>
+          <ul class="flex gap-6 items-center">
+            <li>
+              <a href=""><div class="githubIcon transition-all duration-300"></div></a>
+            </li>
+            <li>
+              <a href=""><div class="frontendMasterIcon transition-all duration-300"></div></a>
+            </li>
+            <li>
+              <a href=""><div class="linkedinIcon transition-all duration-300"></div></a>
+            </li>
+            <li>
+              <a href=""><div class="twitterIcon transition-all duration-300"></div></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
