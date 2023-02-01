@@ -13,8 +13,8 @@
     <title>Portfolio | Emil Backlund</title>
     <script type="module" src="./js/main.js" defer></script>
     <script type="module" src="./js/greeting.js" defer></script>
-    <script type="module" src="./js/githubAPI.js"></script>
-    <script type="module" src="./js/changeIconColor.js"></script>
+    <script type="module" src="./js/githubAPI.js" defer></script>
+    <script type="module" src="./js/contactForm.js" defer></script>
   </head>
   <body
     class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack text-white overflow-x-hidden"
@@ -30,25 +30,37 @@
             src="images/image-profile-mobile.webp"
             alt=""
           />
-          <div class="absolute -z-10 -left-14 -translate-x-1/2 top-1/2 -translate-y-1/2">
+          <div
+            class="pointer-events-none absolute -z-10 -left-14 -translate-x-1/2 top-1/2 -translate-y-1/2"
+          >
             <img src="images/pattern-rings.svg" alt="" />
           </div>
           <div class="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col gap-5 items-center">
-            <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
-              emilbacklund
-            </p>
+            <a href="/">
+              <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+                emilbacklund
+              </p>
+            </a>
             <ul class="flex gap-6 items-center">
               <li>
-                <a href=""><div class="githubIcon transition-all duration-300"></div></a>
+                <a href="https://github.com/EmilBacklund" target="_blank"
+                  ><div class="githubIcon transition-all duration-300"></div
+                ></a>
               </li>
               <li>
-                <a href=""><div class="frontendMasterIcon transition-all duration-300"></div></a>
+                <a href="https://www.frontendmentor.io/profile/EmilBacklund" target="_blank"
+                  ><div class="frontendMasterIcon transition-all duration-300"></div
+                ></a>
               </li>
               <li>
-                <a href=""><div class="linkedinIcon transition-all duration-300"></div></a>
+                <a href="https://www.linkedin.com/in/emil-backlund-55b10021a/" target="_blank"
+                  ><div class="linkedinIcon transition-all duration-300"></div
+                ></a>
               </li>
               <li>
-                <a href=""><div class="twitterIcon transition-all duration-300"></div></a>
+                <a href="https://twitter.com/backiz" target="_blank"
+                  ><div class="twitterIcon transition-all duration-300"></div
+                ></a>
               </li>
             </ul>
           </div>
@@ -57,21 +69,31 @@
       <nav
         class="hidden tablet:flex tablet:gap-0 tablet:flex-row tablet:justify-between items-center py-5 tablet:py-[29px] computer:py-portfolioHeaderPaddingXL mb-portfolioMarginBottomHeader"
       >
-        <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
-          emilbacklund
-        </p>
+        <a href="/">
+          <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+            emilbacklund
+          </p>
+        </a>
         <ul class="flex gap-8 computer:mr-8 items-center">
           <li>
-            <a href=""><div class="githubIcon transition-all duration-300"></div></a>
+            <a href="https://github.com/EmilBacklund" target="_blank"
+              ><div class="githubIcon transition-all duration-300"></div
+            ></a>
           </li>
           <li>
-            <a href=""><div class="frontendMasterIcon transition-all duration-300"></div></a>
+            <a href="https://www.frontendmentor.io/profile/EmilBacklund" target="_blank"
+              ><div class="frontendMasterIcon transition-all duration-300"></div
+            ></a>
           </li>
           <li>
-            <a href=""><div class="linkedinIcon transition-all duration-300"></div></a>
+            <a href="https://www.linkedin.com/in/emil-backlund-55b10021a/" target="_blank"
+              ><div class="linkedinIcon transition-all duration-300"></div
+            ></a>
           </li>
           <li>
-            <a href=""><div class="twitterIcon transition-all duration-300"></div></a>
+            <a href="https://twitter.com/backiz" target="_blank"
+              ><div class="twitterIcon transition-all duration-300"></div
+            ></a>
           </li>
         </ul>
       </nav>
@@ -99,7 +121,7 @@
       </div>
       <div class="relative text-center tablet:text-start mb-20">
         <div
-          class="hidden tablet:block absolute -z-10 left-0 -translate-x-1/2 top-0 -translate-y-1/2"
+          class="hidden tablet:block absolute -z-10 left-0 -translate-x-1/2 top-0 -translate-y-1/2 pointer-events-none"
         >
           <img src="images/pattern-rings.svg" alt="" />
         </div>
@@ -161,7 +183,7 @@
           </h2>
           <p class="text-portfolioLightGrey tablet:text-lg">Just Started</p>
         </div>
-        <div class="absolute bottom-0 translate-x-1/2 translate-y-1/2 right-0">
+        <div class="absolute bottom-0 translate-x-1/2 translate-y-1/2 right-0 pointer-events-none">
           <img src="images/pattern-rings.svg" alt="" />
         </div>
       </section>
@@ -350,7 +372,7 @@
       <div class="max-w-portfolioMaxWidth mx-auto w-11/12">
         <form
           class="tablet:max-w-md tablet:flex tablet:flex-col mx-auto computer:flex-row computer:max-w-full computer:justify-between computer:gap-20 relative"
-          id="contact-form"
+          id="contactForm"
         >
           <div class="computer:max-w-md computer:flex-1">
             <h2
@@ -367,33 +389,87 @@
           </div>
           <div class="computer:max-w-md computer:flex-1">
             <div class="flex flex-col relative mb-8">
-              <input
-                class="bg-transparent text-portfolioLightGrey pb-4 border-b indent-6 mb-8"
-                placeholder="NAME"
-                type="text"
-                required
-              />
-              <label class="hidden" for="Name">Name</label>
-              <input
-                class="bg-transparent text-portfolioLightGrey pb-4 border-b indent-6 mb-8"
-                placeholder="EMAIL"
-                type="email"
-                required
-              />
-              <label class="hidden" for="Email">Email</label>
-              <textarea
-                class="bg-transparent text-portfolioLightGrey indent-6 border-b pb-20"
-                placeholder="MESSAGE"
-                required
-              ></textarea>
+              <p
+                id="generalMessage"
+                class="tracking-normal text-center mb-[50px] text-2xl hidden"
+              ></p>
+
+              <div id="nameSection" class="pb-4 border-b mb-8 relative">
+                <input
+                  class="bg-transparent text-portfolioLightGrey indent-6 w-full"
+                  placeholder="NAME"
+                  type="text"
+                  id="contactName"
+                />
+                <label class="hidden" for="Name">Name</label>
+                <div
+                  id="nameError"
+                  class="hidden tracking-normal text-xs text-red-400 absolute right-0 -bottom-5"
+                >
+                  Sorry, field can't be empy
+                </div>
+                <img
+                  id="nameErrorImage"
+                  class="absolute top-0 right-0 hidden"
+                  src="images/warning.svg"
+                  alt=""
+                />
+              </div>
+              <div id="emailSection" class="pb-4 border-b mb-8 relative">
+                <input
+                  class="bg-transparent text-portfolioLightGrey indent-6 w-full"
+                  placeholder="EMAIL"
+                  type="email"
+                  id="contactEmail"
+                />
+                <label class="hidden" for="Email">Email</label>
+                <div
+                  id="emailErrorFormat"
+                  class="hidden tracking-normal text-xs text-red-400 absolute right-0 -bottom-5"
+                >
+                  Sorry, invalid format here
+                </div>
+                <div
+                  id="emailError"
+                  class="hidden tracking-normal text-xs text-red-400 absolute right-0 -bottom-5"
+                >
+                  Sorry, field can't be empty
+                </div>
+                <img
+                  id="emailErrorImage"
+                  class="absolute top-0 right-0 hidden"
+                  src="images/warning.svg"
+                  alt=""
+                />
+              </div>
+              <div id="messageSection" class="relative">
+                <textarea
+                  class="bg-transparent text-portfolioLightGrey indent-6 border-b pb-20 w-full"
+                  placeholder="MESSAGE"
+                  id="contactMessage"
+                ></textarea>
+                <div
+                  id="messageError"
+                  class="hidden tracking-normal text-xs text-red-400 absolute right-0 -bottom-3"
+                >
+                  Sorry, field can't be empty
+                </div>
+                <img
+                  id="messageErrorImage"
+                  class="absolute top-0 right-0 hidden"
+                  src="images/warning.svg"
+                  alt=""
+                />
+              </div>
               <div
-                class="absolute bottom-0 translate-y-1/2 -translate-x-2/3 tablet:-translate-x-full tablet:translate-y-full computer:hidden"
+                class="pointer-events-none absolute bottom-0 translate-y-1/2 -translate-x-2/3 tablet:-translate-x-full tablet:translate-y-full computer:hidden"
               >
                 <img src="images/pattern-rings.svg" alt="" />
               </div>
             </div>
             <div class="flex justify-end">
               <button
+                id="submit"
                 class="w-fit border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1 leading-7 mb-[87px]"
               >
                 SEND MESSAGE
@@ -401,28 +477,38 @@
             </div>
           </div>
           <div
-            class="absolute bottom-0 left-0 -translate-x-2/3 -translate-y-1/3 hidden computer:block"
+            class="pointer-events-none absolute bottom-0 left-0 -translate-x-2/3 -translate-y-1/3 hidden computer:block"
           >
             <img src="images/pattern-rings.svg" alt="" />
           </div>
         </form>
         <div class="border-b mb-10"></div>
         <div class="flex flex-col gap-5 items-center tablet:flex-row tablet:justify-between">
-          <h2 class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
-            emilbacklund
-          </h2>
+          <a href="/">
+            <h2 class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+              emilbacklund
+            </h2>
+          </a>
           <ul class="flex gap-6 items-center">
             <li>
-              <a href=""><div class="githubIcon transition-all duration-300"></div></a>
+              <a href="https://github.com/EmilBacklund" target="_blank"
+                ><div class="githubIcon transition-all duration-300"></div
+              ></a>
             </li>
             <li>
-              <a href=""><div class="frontendMasterIcon transition-all duration-300"></div></a>
+              <a href="https://www.frontendmentor.io/profile/EmilBacklund" target="_blank"
+                ><div class="frontendMasterIcon transition-all duration-300"></div
+              ></a>
             </li>
             <li>
-              <a href=""><div class="linkedinIcon transition-all duration-300"></div></a>
+              <a href="https://www.linkedin.com/in/emil-backlund-55b10021a/" target="_blank"
+                ><div class="linkedinIcon transition-all duration-300"></div
+              ></a>
             </li>
             <li>
-              <a href=""><div class="twitterIcon transition-all duration-300"></div></a>
+              <a href="https://twitter.com/backiz" target="_blank"
+                ><div class="twitterIcon transition-all duration-300"></div
+              ></a>
             </li>
           </ul>
         </div>
