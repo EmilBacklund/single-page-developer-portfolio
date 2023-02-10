@@ -1,8 +1,8 @@
 import { DateTime } from 'luxon';
 import SUBMIT_ENDPOINT from './settings/API';
 
-const apiToken = process.env.token;
-console.log(apiToken);
+const apiKey = process.env.API_KEY;
+console.log(apiKey);
 
 const contactForm = document.querySelector('#contactForm');
 
@@ -102,7 +102,7 @@ contactForm.addEventListener('submit', (event) => {
       const response = await fetch(SUBMIT_ENDPOINT, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${apiToken}`,
+          Authorization: `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
         },
         body: userData,
