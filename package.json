@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "airtable": "^0.11.6",
-    "luxon": "^3.2.1"
+    "luxon": "^3.2.1",
+    "vite-plugin-environment": "^1.1.3"
   }
 }
