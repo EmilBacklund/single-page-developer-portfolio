@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .githubIcon {
-  background-image: url('images/icon-github.svg');
+  background-image: url('../../public/images/icon-github.svg');
   object-fit: cover;
   background-repeat: no-repeat;
   width: 32px;
