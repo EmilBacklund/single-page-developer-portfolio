@@ -12,11 +12,11 @@
 }
 
 .githubIcon:hover {
-  background-image: url('images/icon-github-active.svg');
+  background-image: url('../../public/images/icon-github-active.svg');
 }
 
 .frontendMasterIcon {
-  background-image: url('images/icon-frontend-mentor.svg');
+  background-image: url('../../public/images/icon-frontend-mentor.svg');
   object-fit: cover;
   background-repeat: no-repeat;
   width: 32px;
@@ -25,11 +25,11 @@
 }
 
 .frontendMasterIcon:hover {
-  background-image: url('images/icon-frontend-mentor-active.svg');
+  background-image: url('../../public/images/icon-frontend-mentor-active.svg');
 }
 
 .linkedinIcon {
-  background-image: url('images/icon-linkedin.svg');
+  background-image: url('../../public/images/icon-linkedin.svg');
   object-fit: cover;
   background-repeat: no-repeat;
   width: 32px;
@@ -38,11 +38,11 @@
 }
 
 .linkedinIcon:hover {
-  background-image: url('images/icon-linkedin-active.svg');
+  background-image: url('../../public/images/icon-linkedin-active.svg');
 }
 
 .twitterIcon {
-  background-image: url('images/icon-twitter.svg');
+  background-image: url('../../public/images/icon-twitter.svg');
   object-fit: cover;
   background-repeat: no-repeat;
   width: 32px;
@@ -51,5 +51,5 @@
 }
 
 .twitterIcon:hover {
-  background-image: url('images/icon-twitter-active.svg');
+  background-image: url('../../public/images/icon-twitter-active.svg');
 }
