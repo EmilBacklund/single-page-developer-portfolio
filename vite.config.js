@@ -4,10 +4,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: resolve(__dirname, 'src'),
   publicDir: resolve('public'),
-  define: {
-    'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
-    'process.env.DEBUG': JSON.stringify(process.env.DEBUG),
-  },
   preview: {
     host: true,
   },
