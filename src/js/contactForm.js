@@ -2,6 +2,7 @@ import { DateTime } from 'luxon';
 import SUBMIT_ENDPOINT from './settings/API';
 
 const apiToken = process.env.token;
+console.log(apiToken);
 
 const contactForm = document.querySelector('#contactForm');
 
