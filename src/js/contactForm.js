@@ -1,5 +1,7 @@
 import { DateTime } from 'luxon';
-import { SUBMIT_ENDPOINT, token } from './settings/API';
+import SUBMIT_ENDPOINT from './settings/API';
+
+const apiToken = process.env.token;
 
 const contactForm = document.querySelector('#contactForm');
 
@@ -99,7 +101,7 @@ contactForm.addEventListener('submit', (event) => {
       const response = await fetch(SUBMIT_ENDPOINT, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${apiToken}`,
           'Content-Type': 'application/json',
         },
         body: userData,
@@ -115,7 +117,6 @@ contactForm.addEventListener('submit', (event) => {
         generalMessage.innerHTML = 'Message submitted, thank you!';
       } else {
         generalMessage.classList.remove('hidden');
-
         generalMessage.classList.remove('text-portfolioGreen');
         generalMessage.classList.add('text-red-400');
         generalMessage.innerHTML = 'Something unexpected happened, try again soon';
