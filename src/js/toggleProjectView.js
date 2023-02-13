@@ -11,8 +11,11 @@ for (let i = 0; i < viewButtonsContainer.length; i += 1) {
     overlay[i].classList.toggle('computer:block');
     viewButtonsContainer[i].classList.toggle('computer:ring-2');
   });
-  viewButtonsContainer[i].addEventListener('focus', (e) => {
-    viewButtons[i].classList.add('computer:flex');
-    overlay[i].classList.add('computer:block');
+  viewButtonsContainer[i].addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      viewButtons[i].classList.add('computer:flex');
+      overlay[i].classList.add('computer:block');
+      viewButtonsContainer[i].classList.add('computer:ring-2');
+    }
   });
 }

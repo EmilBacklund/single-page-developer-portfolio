@@ -21,6 +21,7 @@ const messageError = document.querySelector('#messageError');
 const messageErrorImage = document.querySelector('#messageErrorImage');
 
 const generalMessage = document.querySelector('#generalMessage');
+const loadingIndicator = document.querySelector('#loadingIndicator');
 
 const contactBtn = document.querySelectorAll('.contactBtn');
 
@@ -93,6 +94,8 @@ contactForm.addEventListener('submit', (event) => {
   const formIsValid = isNameValid && isEmailValid && isMessageValid;
 
   if (formIsValid) {
+    loadingIndicator.classList.remove('hidden');
+
     const timeNow = DateTime.now().toISO();
 
     const userData = `
@@ -114,11 +117,13 @@ contactForm.addEventListener('submit', (event) => {
         },
         body: userData,
       });
+
       if (response.ok) {
         contactEmail.value = '';
         contactName.value = '';
         contactMessage.value = '';
 
+        loadingIndicator.classList.add('hidden');
         generalMessage.classList.remove('hidden');
         generalMessage.classList.remove('text-red-400');
         generalMessage.classList.add('text-portfolioGreen');
@@ -129,8 +134,6 @@ contactForm.addEventListener('submit', (event) => {
         generalMessage.classList.add('text-red-400');
         generalMessage.innerHTML = 'Something unexpected happened, try again soon';
       }
-    })().catch((err) => {
-      console.log(err);
-    });
+    })().catch((err) => {});
   }
 });

@@ -28,7 +28,7 @@
         a.appendChild(r);
       })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -679,6 +679,14 @@
           </div>
           <div class="computer:max-w-md computer:flex-1">
             <div class="flex flex-col relative mb-8">
+              <div id="loadingIndicator" class="text-center mb-2 hidden">
+                <div class="lds-ring">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
               <p
                 id="generalMessage"
                 class="tracking-normal text-center mb-[50px] text-2xl hidden"
