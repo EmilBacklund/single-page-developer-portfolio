@@ -13,6 +13,7 @@
     <title>Portfolio | Emil Backlund</title>
     <script type="module" src="./js/main.js" defer></script>
     <script type="module" src="./js/greeting.js" defer></script>
+    <script type="module" src="./js/toggleProjectView.js" defer></script>
     <script type="module" src="./js/githubAPI.js" defer></script>
     <script type="module" src="./js/contactForm.js" defer></script>
   </head>
@@ -137,7 +138,7 @@
           Roots in Stockholm.
         </p>
         <button
-          class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+          class="contactBtn border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
         >
           CONTACT ME
         </button>
@@ -191,7 +192,7 @@
         <div class="flex justify-between mb-10">
           <h2 class="text-[40px] tracking-tight leading-10">Projects</h2>
           <button
-            class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+            class="contactBtn border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
           >
             CONTACT ME
           </button>
@@ -202,7 +203,35 @@
           <div
             class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3 tablet:mb-[60px] computer:mb-[69px]"
           >
-            <img src="images/www.focusart.info_.png" alt="" />
+            <div
+              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+            >
+              <img src="images/www.focusart.info_.png" alt="" />
+              <div
+                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              >
+                <a href="https://www.focusart.info/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/Noroff-Fagskole/project-exam-1-EmilBacklund"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+              <div
+                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
+              ></div>
+            </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl tracking-tight leading-8">SHARE ART WEBSITE</h3>
               <div
@@ -213,24 +242,59 @@
                 <p>JAVASCRIPT</p>
                 <p>WORDPRESS</p>
               </div>
-              <div class="flex gap-[30px]">
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+              <div class="flex gap-[30px] computer:hidden">
+                <a href="https://www.focusart.info/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/Noroff-Fagskole/project-exam-1-EmilBacklund"
+                  target="_blank"
                 >
-                  VIEW PROJECT
-                </button>
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW CODE
-                </button>
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
               </div>
             </div>
           </div>
           <div
             class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3 tablet:mb-[60px] computer:mb-[69px]"
           >
-            <img src="images/artfriender.png" alt="" />
+            <div
+              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+            >
+              <img src="images/artfriender.png" alt="" />
+              <div
+                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              >
+                <a href="https://glistening-gnome-5521e5.netlify.app/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/Noroff-Fagskole/css-frameworks-ca-EmilBacklund"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+              <div
+                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
+              ></div>
+            </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl tracking-tight leading-8">SOCIAL MEDIA PLATFORM</h3>
               <div
@@ -241,24 +305,56 @@
                 <p>JAVASCRIPT</p>
                 <p>TAILWIND</p>
               </div>
-              <div class="flex gap-[30px]">
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+              <div class="flex gap-[30px] computer:hidden">
+                <a href="https://glistening-gnome-5521e5.netlify.app/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/Noroff-Fagskole/css-frameworks-ca-EmilBacklund"
+                  target="_blank"
                 >
-                  VIEW PROJECT
-                </button>
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW CODE
-                </button>
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
               </div>
             </div>
           </div>
           <div
             class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3 tablet:mb-[60px] computer:mb-[69px]"
           >
-            <img src="images/auction-house.png" alt="" />
+            <div
+              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+            >
+              <img src="images/auction-house.png" alt="" />
+              <div
+                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              >
+                <a href="https://splendid-cactus-12d76c.netlify.app/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a href="https://github.com/EmilBacklund/semester-project-2" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+              <div
+                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
+              ></div>
+            </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl tracking-tight leading-8">AUCTION WEBSITE</h3>
               <div
@@ -269,17 +365,21 @@
                 <p>JAVASCRIPT</p>
                 <p>TAILWIND</p>
               </div>
-              <div class="flex gap-[30px]">
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW PROJECT
-                </button>
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW CODE
-                </button>
+              <div class="flex gap-[30px] computer:hidden">
+                <a href="https://splendid-cactus-12d76c.netlify.app/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a href="https://github.com/EmilBacklund/semester-project-2" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -287,7 +387,32 @@
           <div
             class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3 tablet:mb-[60px] computer:mb-[69px]"
           >
-            <img src="images/booking.png" alt="" />
+            <div
+              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+            >
+              <img src="images/booking.png" alt="" />
+              <div
+                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              >
+                <a href="https://joyful-froyo-fd387c.netlify.app/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a href="https://github.com/EmilBacklund/react-interface-2880067" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+              <div
+                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
+              ></div>
+            </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl tracking-tight leading-8">BOOKING SYSTEM</h3>
               <div
@@ -298,22 +423,51 @@
                 <p>JAVASCRIPT</p>
                 <p>REACT</p>
               </div>
-              <div class="flex gap-[30px]">
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW PROJECT
-                </button>
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW CODE
-                </button>
+              <div class="flex gap-[30px] computer:hidden">
+                <a href="https://joyful-froyo-fd387c.netlify.app/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a href="https://github.com/EmilBacklund/react-interface-2880067" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
               </div>
             </div>
           </div>
           <div class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3">
-            <img src="images/frontendmentor.png" alt="" />
+            <div
+              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+            >
+              <img src="images/frontendmentor.png" alt="" />
+              <div
+                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              >
+                <a href="https://delightful-jalebi-21bbe3.netlify.app/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a href="https://github.com/EmilBacklund/news-homepage" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+              <div
+                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
+              ></div>
+            </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl tracking-tight leading-8">FRONTEND MENTOR PROJECT</h3>
               <div
@@ -324,22 +478,54 @@
                 <p>JAVASCRIPT</p>
                 <p>TAILWIND</p>
               </div>
-              <div class="flex gap-[30px]">
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW PROJECT
-                </button>
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW CODE
-                </button>
+              <div class="flex gap-[30px] computer:hidden">
+                <a href="https://delightful-jalebi-21bbe3.netlify.app/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a href="https://github.com/EmilBacklund/news-homepage" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
               </div>
             </div>
           </div>
           <div class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3">
-            <img src="images/www.emil-backlund.com_.png" alt="" />
+            <div
+              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+            >
+              <img src="images/www.emil-backlund.com_.png" alt="" />
+              <div
+                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              >
+                <a href="https://www.emil-backlund.com/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/EmilBacklund/interaction-design-course-assignment-EmilBacklund"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+              <div
+                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
+              ></div>
+            </div>
             <div class="flex flex-col gap-2">
               <h3 class="text-2xl tracking-tight leading-8">BUY VIDEO GAMES</h3>
               <div
@@ -349,17 +535,24 @@
                 <p>CSS</p>
                 <p>WORDPRESS</p>
               </div>
-              <div class="flex gap-[30px]">
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+              <div class="flex gap-[30px] computer:hidden">
+                <a href="https://www.emil-backlund.com/" target="_blank">
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/EmilBacklund/interaction-design-course-assignment-EmilBacklund"
+                  target="_blank"
                 >
-                  VIEW PROJECT
-                </button>
-                <button
-                  class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                >
-                  VIEW CODE
-                </button>
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
               </div>
             </div>
           </div>

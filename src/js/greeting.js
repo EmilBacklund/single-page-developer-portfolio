@@ -5,8 +5,8 @@ let tablet = false;
 let computer = false;
 
 if (
-  window.matchMedia('(min-width: 1110px)').matches ||
-  window.matchMedia('(max-width: 708px)').matches
+  window.matchMedia('(min-width: 1110px)').matches
+  || window.matchMedia('(max-width: 708px)').matches
 ) {
   computer = true;
   tablet = false;

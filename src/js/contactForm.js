@@ -22,6 +22,14 @@ const messageErrorImage = document.querySelector('#messageErrorImage');
 
 const generalMessage = document.querySelector('#generalMessage');
 
+const contactBtn = document.querySelectorAll('.contactBtn');
+
+for (let i = 0; i < contactBtn.length; i += 1) {
+  contactBtn[i].addEventListener('click', () => {
+    contactForm.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  });
+}
+
 function validateEmail(mail) {
   const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   if (mail.match(regEx)) {
