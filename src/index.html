@@ -47,6 +47,7 @@
     <script type="module" src="./js/greeting.js" defer></script>
     <script type="module" src="./js/toggleProjectView.js" defer></script>
     <script type="module" src="./js/contactForm.js" defer></script>
+    <script type="module" src="./js/gsapStyle.js" defer></script>
   </head>
   <body
     class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack text-white overflow-x-hidden"
@@ -58,6 +59,7 @@
         </div>
         <div class="relative w-full">
           <img
+            id="headshotMobile"
             class="w-2/3 max-w-xs mx-auto computer:hidden tablet:hidden"
             src="images/mobile.webp"
             alt="A headshot of Emil Backlund in black and white, smiling and looking directly at the camera. Image is AI generated with Stable Diffusion"
@@ -69,12 +71,14 @@
           </div>
           <div class="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col gap-5 items-center">
             <a href="/">
-              <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+              <p
+                class="emilbacklund text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold"
+              >
                 emilbacklund
               </p>
             </a>
             <ul class="flex gap-6 items-center">
-              <li>
+              <li class="githubGsap">
                 <a href="https://github.com/EmilBacklund" target="_blank"
                   ><div
                     class="githubIcon transition-all duration-300"
@@ -82,7 +86,7 @@
                   ></div
                 ></a>
               </li>
-              <li>
+              <li class="frontendMasterGsap">
                 <a href="https://www.frontendmentor.io/profile/EmilBacklund" target="_blank"
                   ><div
                     class="frontendMasterIcon transition-all duration-300"
@@ -90,7 +94,7 @@
                   ></div
                 ></a>
               </li>
-              <li>
+              <li class="linkedinGsap">
                 <a href="https://www.linkedin.com/in/emil-backlund-55b10021a/" target="_blank"
                   ><div
                     class="linkedinIcon transition-all duration-300"
@@ -98,7 +102,7 @@
                   ></div
                 ></a>
               </li>
-              <li>
+              <li class="twitterGsap">
                 <a href="https://twitter.com/backiz" target="_blank"
                   ><div
                     class="twitterIcon transition-all duration-300"
@@ -114,12 +118,14 @@
         class="hidden tablet:flex tablet:gap-0 tablet:flex-row tablet:justify-between items-center py-5 tablet:py-[29px] computer:py-portfolioHeaderPaddingXL mb-portfolioMarginBottomHeader"
       >
         <a href="/">
-          <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+          <p
+            class="emilbacklund text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold"
+          >
             emilbacklund
           </p>
         </a>
         <ul class="flex gap-8 computer:mr-8 items-center z-10">
-          <li>
+          <li class="githubGsap">
             <a href="https://github.com/EmilBacklund" target="_blank"
               ><div
                 class="githubIcon transition-all duration-300"
@@ -127,7 +133,7 @@
               ></div
             ></a>
           </li>
-          <li>
+          <li class="frontendMasterGsap">
             <a href="https://www.frontendmentor.io/profile/EmilBacklund" target="_blank"
               ><div
                 class="frontendMasterIcon transition-all duration-300"
@@ -135,7 +141,7 @@
               ></div
             ></a>
           </li>
-          <li>
+          <li class="linkedinGsap">
             <a href="https://www.linkedin.com/in/emil-backlund-55b10021a/" target="_blank"
               ><div
                 class="linkedinIcon transition-all duration-300"
@@ -143,7 +149,7 @@
               ></div
             ></a>
           </li>
-          <li>
+          <li class="twitterGsap">
             <a href="https://twitter.com/backiz" target="_blank"
               ><div class="twitterIcon transition-all duration-300" alt="Follow me on Twitter"></div
             ></a>
@@ -155,6 +161,7 @@
       >
         <div class="relative h-full">
           <img
+            id="headshot"
             class="hidden tablet:block h-full object-cover float-right"
             src="images/desktop.webp"
             alt="A headshot of Emil Backlund in black and white, smiling and looking directly at the camera. Image is AI generated with Stable Diffusion"
@@ -177,6 +184,7 @@
           id="greeting"
         ></h1>
         <p
+          id="introduction"
           class="tracking-normal tablet:max-w-md leading-7 text-portfolioLightGrey text-lg mb-portfolioIntroductionMarginBottom tablet:w-2/5"
         >
           A Front End Development student at Noroff Education based in Oslo, with roots in

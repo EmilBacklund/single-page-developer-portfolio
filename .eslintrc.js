@@ -13,5 +13,19 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+        packageDir: ['.'],
+        optionalDependencies: false,
+        peerDependencies: false,
+        allowModules: ['gsap'],
+      },
+    ],
+  },
+  globals: {
+    gsap: 'readonly',
+  },
 };

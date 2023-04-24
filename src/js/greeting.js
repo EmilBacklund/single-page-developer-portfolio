@@ -1,3 +1,5 @@
+import { gsap } from 'gsap';
+
 const greetingMessage = document.querySelector('#greeting');
 
 let mobile = false;
@@ -5,8 +7,8 @@ let tablet = false;
 let computer = false;
 
 if (
-  window.matchMedia('(min-width: 1110px)').matches
-  || window.matchMedia('(max-width: 708px)').matches
+  window.matchMedia('(min-width: 1110px)').matches ||
+  window.matchMedia('(max-width: 708px)').matches
 ) {
   computer = true;
   tablet = false;
@@ -46,3 +48,5 @@ window.addEventListener('resize', () => {
     }
   }
 });
+
+gsap.from(greetingMessage, { duration: 1.2, x: -1000, opacity: 0 });
