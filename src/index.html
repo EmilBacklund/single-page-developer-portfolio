@@ -2,7 +2,10 @@
 <html class="overflow-x-hidden" lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP72HN44S9"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VP72HN44S9"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -47,6 +50,8 @@
     <script type="module" src="./js/greeting.js" defer></script>
     <script type="module" src="./js/toggleProjectView.js" defer></script>
     <script type="module" src="./js/contactForm.js" defer></script>
+    <script type="module" src="./js/showMoreProjects.js" defer></script>
+    <script type="module" src="./js/cursorOverImageEffect.js" defer></script>
   </head>
   <body
     class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack text-white overflow-x-hidden"
@@ -54,7 +59,10 @@
     <header class="relative max-w-portfolioMaxWidth mx-auto w-11/12">
       <nav class="tablet:hidden mb-10 relative w-full">
         <div class="absolute bottom-0 right-0 translate-x-[84px]">
-          <img src="images/pattern-circle.svg" alt="decorative website detail" />
+          <img
+            src="images/pattern-circle.svg"
+            alt="decorative website detail"
+          />
         </div>
         <div class="relative w-full">
           <img
@@ -65,11 +73,18 @@
           <div
             class="pointer-events-none absolute -z-10 -left-14 -translate-x-1/2 top-1/2 -translate-y-1/2"
           >
-            <img src="images/pattern-rings.svg" alt="decorative website detail" />
+            <img
+              src="images/pattern-rings.svg"
+              alt="decorative website detail"
+            />
           </div>
-          <div class="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col gap-5 items-center">
+          <div
+            class="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col gap-5 items-center"
+          >
             <a href="/">
-              <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+              <p
+                class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold"
+              >
                 emilbacklund
               </p>
             </a>
@@ -83,7 +98,9 @@
                 ></a>
               </li>
               <li>
-                <a href="https://www.frontendmentor.io/profile/EmilBacklund" target="_blank"
+                <a
+                  href="https://www.frontendmentor.io/profile/EmilBacklund"
+                  target="_blank"
                   ><div
                     class="frontendMasterIcon transition-all duration-300"
                     alt="View my profile on Frontendmentor"
@@ -91,7 +108,9 @@
                 ></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/emil-backlund-55b10021a/" target="_blank"
+                <a
+                  href="https://www.linkedin.com/in/emil-backlund-55b10021a/"
+                  target="_blank"
                   ><div
                     class="linkedinIcon transition-all duration-300"
                     alt="Connect with me on Linkedin"
@@ -114,7 +133,9 @@
         class="hidden tablet:flex tablet:gap-0 tablet:flex-row tablet:justify-between items-center py-5 tablet:py-[29px] computer:py-portfolioHeaderPaddingXL mb-portfolioMarginBottomHeader"
       >
         <a href="/">
-          <p class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+          <p
+            class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold"
+          >
             emilbacklund
           </p>
         </a>
@@ -128,7 +149,9 @@
             ></a>
           </li>
           <li>
-            <a href="https://www.frontendmentor.io/profile/EmilBacklund" target="_blank"
+            <a
+              href="https://www.frontendmentor.io/profile/EmilBacklund"
+              target="_blank"
               ><div
                 class="frontendMasterIcon transition-all duration-300"
                 alt="View my profile on Frontendmentor"
@@ -136,7 +159,9 @@
             ></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/emil-backlund-55b10021a/" target="_blank"
+            <a
+              href="https://www.linkedin.com/in/emil-backlund-55b10021a/"
+              target="_blank"
               ><div
                 class="linkedinIcon transition-all duration-300"
                 alt="Connect with me on Linkedin"
@@ -145,7 +170,10 @@
           </li>
           <li>
             <a href="https://twitter.com/backiz" target="_blank"
-              ><div class="twitterIcon transition-all duration-300" alt="Follow me on Twitter"></div
+              ><div
+                class="twitterIcon transition-all duration-300"
+                alt="Follow me on Twitter"
+              ></div
             ></a>
           </li>
         </ul>
@@ -153,20 +181,22 @@
       <div
         class="absolute bottom-0 top-0 right-0 float-right computer:right-0 tablet:translate-x-10 computer:translate-x-0"
       >
-        <div class="relative h-full">
+        <div id="profileImage" class="relative h-full">
           <img
             class="hidden tablet:block h-full object-cover float-right"
             src="images/desktop.webp"
             alt="A headshot of Emil Backlund in black and white, smiling and looking directly at the camera. Image is AI generated with Stable Diffusion"
           />
           <img
-            class="absolute computer:bottom-16 computer:right-[351px] tablet:-right-[64.5px] tablet:bottom-0 transition-all duration-500 float-right"
+            class="cursor absolute computer:bottom-16 computer:right-[351px] tablet:-right-[64.5px] tablet:bottom-0 transition-all duration-500 float-right"
             src="images/pattern-circle.svg"
             alt="decorative website detail"
           />
         </div>
       </div>
-      <div class="relative text-center tablet:text-start mb-20">
+      <div
+        class="relative text-center tablet:text-start mb-20 pointer-events-none"
+      >
         <div
           class="hidden tablet:block absolute left-0 -translate-x-1/2 top-0 -translate-y-1/2 pointer-events-none"
         >
@@ -179,9 +209,10 @@
         <p
           class="tracking-normal tablet:max-w-md leading-7 text-portfolioLightGrey text-lg mb-portfolioIntroductionMarginBottom tablet:w-2/5"
         >
-          A Front End Development student at Noroff Education based in Oslo, with roots in
-          Stockholm. I'm passionate about creating beautiful, intuitive and user-friendly web
-          experiences. My portfolio showcases my skills and the projects I've worked on so far.
+          A Front End Development student at Noroff Education based in Oslo,
+          with roots in Stockholm. I'm passionate about creating beautiful,
+          intuitive and user-friendly web experiences. My portfolio showcases my
+          skills and the projects I've worked on so far.
         </p>
         <button
           class="contactBtn border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
@@ -195,42 +226,66 @@
         class="relative flex flex-col items-center gap-6 tablet:gap-0 tablet:flex-row tablet:flex-wrap tablet:justify-between text-center tablet:text-start tracking-normal py-10 border-t border-b tablet:border-b-0 mb-20"
       >
         <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
-          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+          <h2
+            class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold"
+          >
             HTML
           </h2>
-          <p class="text-portfolioLightGrey tablet:text-lg">2 Years Experience</p>
+          <p class="text-portfolioLightGrey tablet:text-lg">
+            2 Years Experience
+          </p>
         </div>
         <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
-          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+          <h2
+            class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold"
+          >
             CSS
           </h2>
-          <p class="text-portfolioLightGrey tablet:text-lg">2 Years Experience</p>
+          <p class="text-portfolioLightGrey tablet:text-lg">
+            2 Years Experience
+          </p>
         </div>
         <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
-          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+          <h2
+            class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold"
+          >
             JavaScript
           </h2>
-          <p class="text-portfolioLightGrey tablet:text-lg">2 Years Experience</p>
+          <p class="text-portfolioLightGrey tablet:text-lg">
+            2 Years Experience
+          </p>
         </div>
         <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
-          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+          <h2
+            class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold"
+          >
             Tailwind
           </h2>
-          <p class="text-portfolioLightGrey tablet:text-lg">1 Year Experience</p>
+          <p class="text-portfolioLightGrey tablet:text-lg">
+            1 Year Experience
+          </p>
         </div>
         <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
-          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+          <h2
+            class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold"
+          >
             Figma
           </h2>
-          <p class="text-portfolioLightGrey tablet:text-lg">2 Year Experience</p>
+          <p class="text-portfolioLightGrey tablet:text-lg">
+            2 Year Experience
+          </p>
         </div>
         <div class="tablet:w-1/2 tablet:mb-[52px] computer:w-1/3">
-          <h2 class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold">
+          <h2
+            class="text-portfolioName tablet:text-5xl leading-10 tablet:leading-[56px] font-bold"
+          >
             React
           </h2>
-          <p class="text-portfolioLightGrey tablet:text-lg">Just Started</p>
+          <p class="text-portfolioLightGrey tablet:text-lg">6 months</p>
         </div>
-        <div class="absolute bottom-0 translate-x-1/2 translate-y-1/2 right-0 pointer-events-none">
+        <div
+          class="absolute bottom-0 translate-x-1/2 translate-y-1/2 right-0 pointer-events-none"
+        >
           <img src="images/pattern-rings.svg" alt="decorative website detail" />
         </div>
       </section>
@@ -244,13 +299,88 @@
           </button>
         </div>
         <div
-          class="flex flex-col gap-10 tablet:flex-row tablet:flex-wrap tablet:justify-between tablet:gap-0 mb-20 tablet:mb-[100px] computer:mb-[139px]"
+          class="grid grid-cols-1 tablet:grid-cols-2 gap-x-6 gap-y-10 tablet:gap-y-[60px]"
         >
-          <div
-            class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3 tablet:mb-[60px] computer:mb-[69px]"
-          >
+          <div>
             <div
-              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              class="viewButtonsContainer mb-5 relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              tabindex="0"
+            >
+              <img
+                src="images/holidaze.webp"
+                alt="Detailed fullscreen printscreen of landingpage on www.emil-backlund.com."
+              />
+              <div
+                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              >
+                <a
+                  href="https://charming-dolphin-31618b.netlify.app/"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                    tabindex="-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/EmilBacklund/PROJECT-EXAM-2"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                    tabindex="-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+              <div
+                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
+              ></div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-2xl tracking-tight leading-8">
+                BOOK ACCOMMODATIONS
+              </h3>
+              <div
+                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
+              >
+                <p>REACT</p>
+                <p>REDUX</p>
+                <p>VITE</p>
+                <p>TAILWIND</p>
+              </div>
+              <div class="flex gap-[30px] computer:hidden">
+                <a
+                  href="https://charming-dolphin-31618b.netlify.app/"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                    tabindex="-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/EmilBacklund/PROJECT-EXAM-2"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                    tabindex="-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="viewButtonsContainer mb-5 relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
               tabindex="0"
             >
               <img
@@ -285,7 +415,9 @@
               ></div>
             </div>
             <div class="flex flex-col gap-2">
-              <h3 class="text-2xl tracking-tight leading-8">SHARE ART WEBSITE</h3>
+              <h3 class="text-2xl tracking-tight leading-8">
+                SHARE ART WEBSITE
+              </h3>
               <div
                 class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
               >
@@ -317,11 +449,9 @@
               </div>
             </div>
           </div>
-          <div
-            class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3 tablet:mb-[60px] computer:mb-[69px]"
-          >
+          <div>
             <div
-              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              class="viewButtonsContainer mb-5 relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
               tabindex="0"
             >
               <img
@@ -331,7 +461,10 @@
               <div
                 class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
               >
-                <a href="https://glistening-gnome-5521e5.netlify.app/" target="_blank">
+                <a
+                  href="https://glistening-gnome-5521e5.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -356,7 +489,9 @@
               ></div>
             </div>
             <div class="flex flex-col gap-2">
-              <h3 class="text-2xl tracking-tight leading-8">SOCIAL MEDIA PLATFORM</h3>
+              <h3 class="text-2xl tracking-tight leading-8">
+                SOCIAL MEDIA PLATFORM
+              </h3>
               <div
                 class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
               >
@@ -366,7 +501,10 @@
                 <p>TAILWIND</p>
               </div>
               <div class="flex gap-[30px] computer:hidden">
-                <a href="https://glistening-gnome-5521e5.netlify.app/" target="_blank">
+                <a
+                  href="https://glistening-gnome-5521e5.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -388,11 +526,9 @@
               </div>
             </div>
           </div>
-          <div
-            class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3 tablet:mb-[60px] computer:mb-[69px]"
-          >
+          <div>
             <div
-              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              class="viewButtonsContainer mb-5 relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
               tabindex="0"
             >
               <img
@@ -402,7 +538,10 @@
               <div
                 class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
               >
-                <a href="https://splendid-cactus-12d76c.netlify.app/" target="_blank">
+                <a
+                  href="https://splendid-cactus-12d76c.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -410,7 +549,10 @@
                     VIEW PROJECT
                   </button>
                 </a>
-                <a href="https://github.com/EmilBacklund/semester-project-2" target="_blank">
+                <a
+                  href="https://github.com/EmilBacklund/semester-project-2"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -434,7 +576,10 @@
                 <p>TAILWIND</p>
               </div>
               <div class="flex gap-[30px] computer:hidden">
-                <a href="https://splendid-cactus-12d76c.netlify.app/" target="_blank">
+                <a
+                  href="https://splendid-cactus-12d76c.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -442,7 +587,10 @@
                     VIEW PROJECT
                   </button>
                 </a>
-                <a href="https://github.com/EmilBacklund/semester-project-2" target="_blank">
+                <a
+                  href="https://github.com/EmilBacklund/semester-project-2"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -454,11 +602,9 @@
             </div>
           </div>
 
-          <div
-            class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3 tablet:mb-[60px] computer:mb-[69px]"
-          >
+          <div>
             <div
-              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              class="viewButtonsContainer mb-5 relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
               tabindex="0"
             >
               <img
@@ -468,7 +614,10 @@
               <div
                 class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
               >
-                <a href="https://joyful-froyo-fd387c.netlify.app/" target="_blank">
+                <a
+                  href="https://joyful-froyo-fd387c.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -476,7 +625,10 @@
                     VIEW PROJECT
                   </button>
                 </a>
-                <a href="https://github.com/EmilBacklund/react-interface-2880067" target="_blank">
+                <a
+                  href="https://github.com/EmilBacklund/react-interface-2880067"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -500,7 +652,10 @@
                 <p>REACT</p>
               </div>
               <div class="flex gap-[30px] computer:hidden">
-                <a href="https://joyful-froyo-fd387c.netlify.app/" target="_blank">
+                <a
+                  href="https://joyful-froyo-fd387c.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -508,7 +663,10 @@
                     VIEW PROJECT
                   </button>
                 </a>
-                <a href="https://github.com/EmilBacklund/react-interface-2880067" target="_blank">
+                <a
+                  href="https://github.com/EmilBacklund/react-interface-2880067"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -519,9 +677,9 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3 tablet:mb-[60px]">
+          <div>
             <div
-              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              class="viewButtonsContainer mb-5 relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
               tabindex="0"
             >
               <img
@@ -531,7 +689,10 @@
               <div
                 class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
               >
-                <a href="https://delightful-jalebi-21bbe3.netlify.app/" target="_blank">
+                <a
+                  href="https://delightful-jalebi-21bbe3.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -539,7 +700,10 @@
                     VIEW PROJECT
                   </button>
                 </a>
-                <a href="https://github.com/EmilBacklund/news-homepage" target="_blank">
+                <a
+                  href="https://github.com/EmilBacklund/news-homepage"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -553,7 +717,9 @@
               ></div>
             </div>
             <div class="flex flex-col gap-2">
-              <h3 class="text-2xl tracking-tight leading-8">FRONTEND MENTOR PROJECT</h3>
+              <h3 class="text-2xl tracking-tight leading-8">
+                FRONTEND MENTOR PROJECT
+              </h3>
               <div
                 class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
               >
@@ -563,7 +729,10 @@
                 <p>TAILWIND</p>
               </div>
               <div class="flex gap-[30px] computer:hidden">
-                <a href="https://delightful-jalebi-21bbe3.netlify.app/" target="_blank">
+                <a
+                  href="https://delightful-jalebi-21bbe3.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -571,7 +740,10 @@
                     VIEW PROJECT
                   </button>
                 </a>
-                <a href="https://github.com/EmilBacklund/news-homepage" target="_blank">
+                <a
+                  href="https://github.com/EmilBacklund/news-homepage"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -582,9 +754,9 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3 tablet:mb-[60px]">
+          <div>
             <div
-              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              class="viewButtonsContainer mb-5 relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
               tabindex="0"
             >
               <img
@@ -594,7 +766,10 @@
               <div
                 class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
               >
-                <a href="https://preeminent-fudge-00a560.netlify.app/" target="_blank">
+                <a
+                  href="https://preeminent-fudge-00a560.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -619,7 +794,9 @@
               ></div>
             </div>
             <div class="flex flex-col gap-2">
-              <h3 class="text-2xl tracking-tight leading-8">REACT CALCULATOR</h3>
+              <h3 class="text-2xl tracking-tight leading-8">
+                REACT CALCULATOR
+              </h3>
               <div
                 class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
               >
@@ -629,7 +806,10 @@
                 <p>REACT</p>
               </div>
               <div class="flex gap-[30px] computer:hidden">
-                <a href="https://preeminent-fudge-00a560.netlify.app/" target="_blank">
+                <a
+                  href="https://preeminent-fudge-00a560.netlify.app/"
+                  target="_blank"
+                >
                   <button
                     class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
                     tabindex="-1"
@@ -651,9 +831,89 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-5 tablet:w-1/2 tablet:pr-3">
+
+          <div>
             <div
-              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              class="viewButtonsContainer mb-5 relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
+              tabindex="0"
+            >
+              <img
+                src="images/result-summary-component.png"
+                alt="Detailed fullscreen printscreen of result summary component."
+              />
+              <div
+                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              >
+                <a
+                  href="https://jovial-parfait-c1561c.netlify.app/"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                    tabindex="-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/EmilBacklund/result-summary-component"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                    tabindex="-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+              <div
+                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
+              ></div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-2xl tracking-tight leading-8">
+                PERFORMANCE COMPONENT
+              </h3>
+              <div
+                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
+              >
+                <p>JAVASCRIPT</p>
+                <p>REACT</p>
+                <p>TAILWIND</p>
+              </div>
+              <div class="flex gap-[30px] computer:hidden">
+                <a
+                  href="https://jovial-parfait-c1561c.netlify.app/"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                    tabindex="-1"
+                  >
+                    VIEW PROJECT
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/EmilBacklund/result-summary-component"
+                  target="_blank"
+                >
+                  <button
+                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
+                    tabindex="-1"
+                  >
+                    VIEW CODE
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            id="extraProjects"
+            class="h-0 overflow-hidden opacity-0 transition-all duration-300"
+          >
+            <div
+              class="mb-5 viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
               tabindex="0"
             >
               <img
@@ -719,67 +979,32 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-5 tablet:w-1/2 tablet:pl-3 tablet:mb-[60px]">
-            <div
-              class="viewButtonsContainer relative computer:cursor-pointer computer:hover:ring-2 computer:ring-portfolioGreen computer:transition computer:duration-200"
-              tabindex="0"
+        </div>
+        <div
+          class="relative mb-20 tablet:mb-[100px] computer:mb-[139px] mt-10 tablet:mt-20"
+        >
+          <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center">
+            <button
+              id="showMoreProjects"
+              type="button"
+              class="inline-flex items-center hover:ring-2 hover:ring-portfolioGreen gap-x-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-portfolioBlack shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             >
-              <img
-                src="images/result-summary-component.png"
-                alt="Detailed fullscreen printscreen of result summary component."
-              />
-              <div
-                class="viewButtons hidden flex-col absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-center gap-12 z-20"
+              <svg
+                class="-ml-1 -mr-0.5 h-5 w-5 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
               >
-                <a href="https://jovial-parfait-c1561c.netlify.app/" target="_blank">
-                  <button
-                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                    tabindex="-1"
-                  >
-                    VIEW PROJECT
-                  </button>
-                </a>
-                <a href="https://github.com/EmilBacklund/result-summary-component" target="_blank">
-                  <button
-                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                    tabindex="-1"
-                  >
-                    VIEW CODE
-                  </button>
-                </a>
-              </div>
-              <div
-                class="overlay hidden absolute h-full w-full bg-black top-0 left-0 opacity-70 z-10"
-              ></div>
-            </div>
-            <div class="flex flex-col gap-2">
-              <h3 class="text-2xl tracking-tight leading-8">PERFORMANCE COMPONENT</h3>
-              <div
-                class="flex flex-wrap gap-5 text-lg leading-7 tracking-normal text-portfolioLightGrey"
-              >
-                <p>JAVASCRIPT</p>
-                <p>REACT</p>
-                <p>TAILWIND</p>
-              </div>
-              <div class="flex gap-[30px] computer:hidden">
-                <a href="https://jovial-parfait-c1561c.netlify.app/" target="_blank">
-                  <button
-                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                    tabindex="-1"
-                  >
-                    VIEW PROJECT
-                  </button>
-                </a>
-                <a href="https://github.com/EmilBacklund/result-summary-component" target="_blank">
-                  <button
-                    class="border-b-2 tracking-widest border-portfolioGreen hover:text-portfolioGreen pb-1"
-                    tabindex="-1"
-                  >
-                    VIEW CODE
-                  </button>
-                </a>
-              </div>
-            </div>
+                <path
+                  id="svgShowMorePath"
+                  d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                />
+              </svg>
+              <span id="showMoreProjectsText">Show more</span>
+            </button>
           </div>
         </div>
       </section>
@@ -801,11 +1026,12 @@
             <p
               class="text-base leading-[26px] tracking-normal text-center mb-[50px] computer:text-start"
             >
-              As a student eager to apply my skills in a professional setting, I am currently
-              seeking opportunities in Front End Development. I am open to taking on projects of any
-              scale and am always looking to expand my skill set. If you have a project in mind or
-              would like to discuss potential employment opportunities, I would love to hear from
-              you. Fill out the form to send me a message!
+              As a student eager to apply my skills in a professional setting, I
+              am currently seeking opportunities in Front End Development. I am
+              open to taking on projects of any scale and am always looking to
+              expand my skill set. If you have a project in mind or would like
+              to discuss potential employment opportunities, I would love to
+              hear from you. Fill out the form to send me a message!
             </p>
           </div>
           <div class="computer:max-w-md computer:flex-1">
@@ -893,7 +1119,10 @@
               <div
                 class="pointer-events-none absolute bottom-0 translate-y-1/2 -translate-x-2/3 tablet:-translate-x-full tablet:translate-y-full computer:hidden"
               >
-                <img src="images/pattern-rings.svg" alt="decorative website detail" />
+                <img
+                  src="images/pattern-rings.svg"
+                  alt="decorative website detail"
+                />
               </div>
             </div>
             <div class="flex justify-end">
@@ -908,13 +1137,20 @@
           <div
             class="pointer-events-none absolute bottom-0 left-0 -translate-x-2/3 -translate-y-1/3 hidden computer:block"
           >
-            <img src="images/pattern-rings.svg" alt="decorative website detail" />
+            <img
+              src="images/pattern-rings.svg"
+              alt="decorative website detail"
+            />
           </div>
         </form>
         <div class="border-b mb-10"></div>
-        <div class="flex flex-col gap-5 items-center tablet:flex-row tablet:justify-between">
+        <div
+          class="flex flex-col gap-5 items-center tablet:flex-row tablet:justify-between"
+        >
           <a href="/">
-            <h2 class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold">
+            <h2
+              class="text-2xl tablet:text-portfolioName leading-8 tracking-tight font-bold"
+            >
               emilbacklund
             </h2>
           </a>
@@ -928,7 +1164,9 @@
               ></a>
             </li>
             <li>
-              <a href="https://www.frontendmentor.io/profile/EmilBacklund" target="_blank"
+              <a
+                href="https://www.frontendmentor.io/profile/EmilBacklund"
+                target="_blank"
                 ><div
                   class="frontendMasterIcon transition-all duration-300"
                   alt="View my profile on Frontendmentor"
@@ -936,7 +1174,9 @@
               ></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/emil-backlund-55b10021a/" target="_blank"
+              <a
+                href="https://www.linkedin.com/in/emil-backlund-55b10021a/"
+                target="_blank"
                 ><div
                   class="linkedinIcon transition-all duration-300"
                   alt="Connect with me on Linkedin"
