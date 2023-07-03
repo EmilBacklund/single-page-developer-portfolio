@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon';
-import SUBMIT_ENDPOINT from './settings/API';
+import { SUBMIT_ENDPOINT } from './settings/API';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
