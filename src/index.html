@@ -44,11 +44,8 @@
     <meta name="author" content="Emil Backlund" />
     <title>Portfolio | Emil Backlund</title>
     <script type="module" src="./js/main.js" defer></script>
-    <script type="module" src="./js/fetchProjects.js" defer></script>
     <script type="module" src="./js/greeting.js" defer></script>
-    <script type="module" src="./js/toggleProjectView.js" defer></script>
     <script type="module" src="./js/contactForm.js" defer></script>
-    <script type="module" src="./js/showMoreProjects.js" defer></script>
   </head>
   <body
     class="font-spaceGrotesk tracking-portfolioLetterSpacing bg-portfolioBlack text-white overflow-x-hidden"
@@ -246,6 +243,9 @@
           </button>
         </div>
         <div id="projects"></div>
+        <div class="flex justify-center">
+          <div class="hidden" id="loader"></div>
+        </div>
         <div class="relative mb-20 tablet:mb-[100px] computer:mb-[139px] mt-10 tablet:mt-20">
           <div class="absolute inset-0 flex items-center" aria-hidden="true">
             <div class="w-full border-t border-gray-300"></div>
