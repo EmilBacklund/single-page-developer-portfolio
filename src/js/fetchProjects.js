@@ -7,7 +7,7 @@ const loader = document.querySelector('#loader');
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
-export default async function getProjects(numberOfProjects) {
+export default async function getProjects() {
   loader.classList.remove('hidden');
   loader.classList.add('block');
 
@@ -17,9 +17,6 @@ export default async function getProjects(numberOfProjects) {
         Authorization: `Bearer ${API_KEY}`,
         'Content-Type': 'application/json',
       },
-      params: {
-        maxRecords: numberOfProjects,
-      },
     });
 
     if (response.status === 200) {
@@ -27,9 +24,8 @@ export default async function getProjects(numberOfProjects) {
 
       const sortedProjects = data.records
         .slice()
-        .sort((a, b) => a.fields.position - b.fields.position);
+        .sort((a, b) => a.fields.DisplayOrder - b.fields.DisplayOrder);
 
-      console.log('sortedProjects', sortedProjects);
       projectsContainer.innerHTML = `
         <div class="grid grid-cols-1 tablet:grid-cols-2 gap-x-6 gap-y-10 tablet:gap-y-[60px]">
             ${sortedProjects
@@ -105,7 +101,6 @@ export default async function getProjects(numberOfProjects) {
       toggleProjectView();
     }
   } catch (error) {
-    console.log(error);
     loader.classList.remove('block');
     loader.classList.add('hidden');
   }

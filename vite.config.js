@@ -21,7 +21,7 @@ export default defineConfig({
     alias: {},
   },
   server: {
-    port: 8080,
+    port: 8081,
     hot: true,
   },
 });

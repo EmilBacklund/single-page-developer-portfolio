@@ -1,7 +1,8 @@
 import { DateTime } from 'luxon';
-import { SUBMIT_ENDPOINT } from './settings/API';
+import { SUBMIT_ENDPOINT, VERYFY_RECAPTCHA_TOKEN } from './settings/API';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+const reCAPTCHA_site_key = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 const contactForm = document.querySelector('#contactForm');
 
@@ -96,44 +97,81 @@ contactForm.addEventListener('submit', (event) => {
   if (formIsValid) {
     loadingIndicator.classList.remove('hidden');
 
-    const timeNow = DateTime.now().toISO();
+    grecaptcha.ready(function () {
+      grecaptcha.execute(reCAPTCHA_site_key, { action: 'submit' }).then(async function (token) {
+        loadingIndicator.classList.remove('hidden');
 
-    const userData = `
-    {
-        "fields": {
-            "Name": "${contactName.value}",
-            "Email": "${contactEmail.value}",
-            "Message": "${contactMessage.value}",
-            "Date Recieved": "${timeNow}"
+        try {
+          const verifyResponse = await fetch('/.netlify/functions/verify-recaptcha', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token }),
+          });
+
+          const result = await verifyResponse.json();
+
+          const requiredScore = 0.5;
+
+          if (result.success && result.score > requiredScore) {
+            const timeNow = DateTime.now().toISO();
+
+            const userData = JSON.stringify({
+              fields: {
+                Name: contactName.value,
+                Email: contactEmail.value,
+                Message: contactMessage.value,
+                'Date Recieved': timeNow,
+              },
+            });
+
+            const response = await fetch(SUBMIT_ENDPOINT, {
+              method: 'POST',
+              headers: {
+                Authorization: `Bearer ${API_KEY}`,
+                'Content-Type': 'application/json',
+              },
+              body: userData,
+            });
+
+            if (response.ok) {
+              contactEmail.value = '';
+              contactName.value = '';
+              contactMessage.value = '';
+
+              generalMessage.classList.remove('text-red-400');
+              generalMessage.classList.add('text-portfolioGreen');
+              generalMessage.innerHTML = 'Message submitted, thank you!';
+            } else {
+              throw new Error('Form submission failed.');
+            }
+          } else {
+            generalMessage.classList.remove('text-portfolioGreen');
+            generalMessage.classList.add('text-red-400');
+            generalMessage.innerHTML = `Hmm... that reCAPTCHA score looks a little low. You scored ${result.score}, and I need ${requiredScore} from you. If you're human, try refreshing or sending your message another way 🧠
+   `;
+          }
+        } catch (error) {
+          generalMessage.classList.remove('text-portfolioGreen');
+          generalMessage.classList.add('text-red-400');
+          generalMessage.innerHTML = 'Something went wrong. Please try again later.';
+          console.error('Submit error:', error);
+        } finally {
+          generalMessage.classList.remove('hidden');
+          loadingIndicator.classList.add('hidden');
         }
-    }`;
-
-    (async function submitForm() {
-      const response = await fetch(SUBMIT_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: userData,
       });
-
-      if (response.ok) {
-        contactEmail.value = '';
-        contactName.value = '';
-        contactMessage.value = '';
-
-        loadingIndicator.classList.add('hidden');
-        generalMessage.classList.remove('hidden');
-        generalMessage.classList.remove('text-red-400');
-        generalMessage.classList.add('text-portfolioGreen');
-        generalMessage.innerHTML = 'Message submitted, thank you!';
-      } else {
-        generalMessage.classList.remove('hidden');
-        generalMessage.classList.remove('text-portfolioGreen');
-        generalMessage.classList.add('text-red-400');
-        generalMessage.innerHTML = 'Something unexpected happened, try again soon';
-      }
-    })().catch((err) => {});
+    });
   }
+});
+
+function loadReCaptchaScript(reCAPTCHA_site_key) {
+  const script = document.createElement('script');
+  script.src = `https://www.google.com/recaptcha/api.js?render=${reCAPTCHA_site_key}`;
+  script.async = true;
+  document.head.appendChild(script);
+}
+
+// Load the script when the page is ready
+window.addEventListener('DOMContentLoaded', () => {
+  loadReCaptchaScript(reCAPTCHA_site_key);
 });
